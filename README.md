@@ -4,7 +4,7 @@
 
 The Cinema Application Backend serves as the API layer for the frontend to interact with. This application allows users to book seats for movies in various halls. Users can view available movies, select seats, and make bookings. Additionally, an admin panel is available for managing movie listings.
 
-## 🌟 Features
+##  Features
 
 ### 👥 For General Users
 
@@ -29,10 +29,16 @@ The Cinema Application Backend serves as the API layer for the frontend to inter
 
 ## 🛠 Technologies Used
 
-- Spring Boot
-- JPA (Java Persistence API)
-- PostgreSQL
-- Lombok
+### Backend
+-  **Spring Boot** - The core framework used for the backend.
+-  **JPA (Java Persistence API)** - For database operations.
+-  **PostgreSQL** - As the database solution.
+-  **Lombok** - For reducing boilerplate code in Java.
+
+
+### Frontend
+-  **React** - The library used for building the user interface.
+-  **TypeScript** - For adding static type definitions to JavaScript, enhancing code quality and maintainability.
 
 ---
 
