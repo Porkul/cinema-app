@@ -4,9 +4,9 @@
 
 The Cinema Application Backend serves as the API layer for the frontend to interact with. This application allows users to book seats for movies in various halls. Users can view available movies, select seats, and make bookings. Additionally, an admin panel is available for managing movie listings.
 
-## Features
+## 🌟 Features
 
-### For General Users
+### 👥 For General Users
 
 - **User Authentication**: Secure sign-in process to ensure data privacy.
 - **Movie Timetables**: Real-time listings of movies and their timings.
@@ -15,7 +15,7 @@ The Cinema Application Backend serves as the API layer for the frontend to inter
 - **Booking Process**: Engage in a streamlined booking process where you can select seats, see the price, and confirm your booking in a few easy steps.
 - **Booking History**: Review your past bookings at any time to keep track of your movie experiences.
 
-### For Administrators
+### 🔒 For Administrators
 
 - **Role-Based Authorization**: A specialized admin panel that is accessible only to authorized users.
 - **Session Management**: Add new sessions or modify existing ones.
@@ -23,58 +23,11 @@ The Cinema Application Backend serves as the API layer for the frontend to inter
 - **Booking History**: Manage and oversee all booking records, with the option to modify or delete them.
   
 ## UML Diagram
+
 <img src="https://github.com/Porkul/cinema-app/assets/86647070/0e025839-5601-43ec-b3f2-124533b1ad3d" alt="cinema-uml" width="650"/>
 
-## Entities and Relationships
 
-### Entities
-
-1. **User**
-   - `userId`: Integer (Primary Key)
-   - `username`: String
-   - `password`: String (Hashed)
-   - **Relationships:**
-      - `OneToMany` with `Booking`: One user can have multiple bookings.
-
-2. **Role**
-   - Commonly used for authority management.
-   - **Relationships:**
-      - `ManyToMany` with `User`: Multiple users can have the same role.
-
-3. **Movie**
-   - `movieId`: Long (Primary Key)
-   - `movieName`: String
-   - `image`: String
-   - `movieDetails`: String
-   - **Relationships:**
-      - `OneToMany` with `Booking`: One movie can have multiple bookings.
-
-4. **Hall**
-   - `hallId`: Long (Primary Key)
-   - `hallName`: String
-   - **Relationships:**
-      - `OneToMany` with `Seat`: One hall can have multiple seats.
-      - `OneToMany` with `Booking`: One hall can have multiple bookings.
-
-5. **Seat**
-   - `seatId`: Long (Primary Key)
-   - `seatNumber`: Integer
-   - `isAvailable`: Boolean
-   - **Relationships:**
-      - `ManyToOne` with `Hall`: Many seats belong to one hall.
-      - `ManyToMany` with `Booking`: One booking can have multiple seats.
-
-6. **Booking**
-   - `bookingId`: Long (Primary Key)
-   - **Relationships:**
-      - `ManyToOne` with `User`: One booking belongs to one user.
-      - `ManyToOne` with `Movie`: One booking is for one movie.
-      - `ManyToOne` with `Hall`: One booking takes place in one hall.
-      - `ManyToMany` with `Seat`: One booking can have multiple seats.
-
----
-
-## Technologies Used
+## 🛠 Technologies Used
 
 - Spring Boot
 - JPA (Java Persistence API)
@@ -83,7 +36,7 @@ The Cinema Application Backend serves as the API layer for the frontend to inter
 
 ---
 
-### How the Admin Panel Works
+### 📘 Admin Panel Guide
 
 Authorized administrators can log into the admin panel to manage movies. The admin panel provides functionalities to add new movies to the database, update existing movie details, and remove movies.
 
