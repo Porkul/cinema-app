@@ -32,11 +32,8 @@ public class AuthController {
         try {
             LoginResponseDTO loginResponse = authService.loginUser(body.getUsername(), body.getPassword());
 
-            // Return the response with 200 OK status
             return new ResponseEntity<>(loginResponse, HttpStatus.OK);
         } catch (Exception e) {
-            // Here you can catch specific exceptions like UserNotFoundException etc.
-            // Return the response with 400 BAD REQUEST or whatever status you prefer
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
     }
