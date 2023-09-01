@@ -23,57 +23,7 @@ The Cinema Application Backend serves as the API layer for the frontend to inter
 - **Booking History**: Manage and oversee all booking records, with the option to modify or delete them.
   
 ## UML Diagram
-
-    +--------------------+           +---------------------+
-    |     User           |           |     Role            |
-    +--------------------+           +---------------------+
-    | - userId: Integer  |< >---|< >-| - roleId: Integer   |
-    | - username: String |           | - authority: String |
-    | - password: String |           +---------------------+
-    +--------------------+           
-            |                            
-            | 1                          
-            | *
-    +-------------------+           
-    |     Booking       |          
-    +-------------------+          
-    | - bookingId: Long |          
-    | - user: User      |          
-    | - movie: Movie    |          
-    | - hall: Hall      |          
-    +-------------------+          
-            |                        
-            | 1                      
-            | 1                      
-    +---------------------+            +------------------------+
-    |     Hall            |            |     Movie              |
-    +---------------------+            +------------------------+
-    | - hallId: Long      |< >------| *| - movieId: Long        |
-    | - hallName: String  |            | - movieName: String    |
-    | - seats: List<Seat> |            | - image: String        |
-    | - bookings:         |            | - movieDetails: String |
-    |     List<Booking>   |            +------------------------+
-    +---------------------+           
-            |                                  
-            | 1                                
-            | *
-    +------------------------+             
-    |     Seat               |             
-    +------------------------+             
-    | - seatId: Long         |             
-    | - seatNumber: Integer  |           
-    | - isAvailable: Boolean |          
-    | - hall: Hall           |             
-    +------------------------+              
-            |                                 
-            | *
-            | *
-    +-----------------+                     
-    |     Genre       |                     
-    +-----------------+                     
-    | - id: Long      |                     
-    | - name: String  |                     
-    +-----------------+ 
+<img src="https://github.com/Porkul/cinema-app/assets/86647070/0e025839-5601-43ec-b3f2-124533b1ad3d" alt="cinema-uml" width="650"/>
 
 ## Entities and Relationships
 
