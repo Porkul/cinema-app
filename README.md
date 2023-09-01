@@ -12,6 +12,7 @@ The Cinema Application Backend serves as the API layer for the frontend to inter
 - **Movie Timetables & Dynamic Session Info**: Browse real-time listings and get comprehensive session details, including hall, movie, and time
 - **Booking Process**: Engage in a streamlined booking process where you can select seats, see the price, and confirm your booking in a few easy steps.
 - **Booking History**: Review your past bookings at any time to keep track of your movie experiences.
+> 📣 **Note**:  Upcoming versions will include a shopping cart and payment processing features
 
 ### 🔒 For Administrators
 
