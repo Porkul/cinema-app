@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Cinema Application Backend serves as the API layer for the frontend to interact with. This application allows users to book seats for movies in various halls. Users can view available movies, select seats, and make bookings. Additionally, an admin panel is available for managing movie listings.
+The Cinema Application Backend serves as the API layer for the frontend to interact with, enabling users to conveniently book movie seats across different halls. It also features an admin panel for streamlined management of movies and sessions.
 
 ##  Features
 
