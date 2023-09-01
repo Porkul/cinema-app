@@ -6,16 +6,21 @@ The Cinema Application Backend serves as the API layer for the frontend to inter
 
 ## Features
 
-- User authentication
-- Role-based authorization
-    - Admin panel for authorized users
-- Movie listing
-- Hall and seat selection
-- Booking confirmation
-- Admin Panel Features
-    - Add new movies
-    - Update existing movies
-    - Delete movies
+### For General Users
+
+- **User Authentication**: Secure sign-in process to ensure data privacy.
+- **Movie Timetables**: Real-time listings of movies and their timings.
+- **Dynamic Session Info**: View details like hall, movie, and time to make an informed choice.
+- **Hall and Seat Selection**: Choose your favorite hall and seats for your movie experience.
+- **Booking Process**: Engage in a streamlined booking process where you can select seats, see the price, and confirm your booking in a few easy steps.
+- **Booking History**: Review your past bookings at any time to keep track of your movie experiences.
+
+### For Administrators
+
+- **Role-Based Authorization**: A specialized admin panel that is accessible only to authorized users.
+- **Session Management**: Add new sessions or modify existing ones.
+- **Movie Management**: Add, update, or delete movie listings in real-time.
+- **Booking History**: Manage and oversee all booking records, with the option to modify or delete them.
   
 ## UML Diagram
 
