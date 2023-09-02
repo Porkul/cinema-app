@@ -41,14 +41,53 @@ The Cinema Application Backend provides an API for the frontend, making it easy 
 
 ---
 
-### 📘 Admin Panel Guide
+### 📘 API Endpoints
 
-Authorized administrators can log into the admin panel to manage movies. The admin panel provides functionalities to add new movies to the database, update existing movie details, and remove movies.
+### User Authentication
 
-- `POST /admin/movies` - To add a new movie
-- `PUT /admin/movies/{movieId}` - To update an existing movie
-- `DELETE /admin/movies/{movieId}` - To delete a movie
+- `POST /auth/register`: Registers a new user.
+- `POST /auth/login`: Authenticates a user and returns a token.
+- `GET /auth/user`: Fetches the authenticated user's details.
 
-These endpoints are secured so that only users with admin roles can access them.
+### Movie Operations
+
+- `GET /movies`: Fetches all movies for general discovery.
+- `GET /movies/{movieId}`: Fetches details of a specific movie.
+- `GET /movies/popular`: Fetches popular movies.
+- `GET /movies/upcoming`: Fetches movies that are coming soon.
+- `GET /movies/genres/{genre}`: Fetches all movies of a specific genre.
+
+### Booking Operations
+
+- `POST /bookings`: Makes a new booking.
+- `GET /bookings`: Fetches all bookings made by the authenticated user.
+- `GET /bookings/{bookingId}`: Fetches details of a specific booking.
+- `POST /bookings/{bookingId}/refund`: Requests a refund for a specific booking.
+
+### Hall and Seat Operations
+
+- `GET /halls`: Fetches all halls.
+- `GET /halls/{hallId}`: Fetches details of a specific hall.
+- `GET /halls/{hallId}/seats`: Fetches all seats in a specific hall.
+
+### Admin Operations
+
+#### Movie Management
+
+- `POST /admin/movies`: Adds a new movie.
+- `PUT /admin/movies/{movieId}`: Updates an existing movie.
+- `DELETE /admin/movies/{movieId}`: Deletes a movie.
+
+#### Movie Session Management
+
+- `POST /admin/sessions`: Adds a new movie session to the timetable.
+- `PUT /admin/sessions/{sessionId}`: Updates an existing session.
+- `DELETE /admin/sessions/{sessionId}`: Deletes a session.
+
+#### Customer Booking Management
+
+- `GET /admin/bookings`: Fetches all bookings.
+- `DELETE /admin/bookings/{bookingId}`: Cancels a booking.
+
 
 
